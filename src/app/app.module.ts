@@ -3,15 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MaterialModule } from './modules/material.module';
 
 @NgModule({
+  // Components are declared
   declarations: [
     AppComponent
   ],
+  // Modules are imported
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
+  // Services are provided
   providers: [],
   bootstrap: [AppComponent]
 })
