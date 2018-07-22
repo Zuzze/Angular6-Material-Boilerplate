@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './modules/material.module';
 import { MyMaterialComponentComponent } from './components/my-material-component/my-material-component.component';
+
+import {OverlayContainer} from '@angular/cdk/overlay';
 
 // note that in bigger applications it is recommended to divide app
 // into modules and import them instead of declaring specific components
@@ -18,11 +21,18 @@ import { MyMaterialComponentComponent } from './components/my-material-component
   // Modules are imported
   imports: [
     BrowserModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
     AppRoutingModule,
-    MaterialModule
   ],
   // Services are provided
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  // this is to change themes for the whole app
+  constructor(overlayContainer: OverlayContainer) {
+    overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
+  }
+}
