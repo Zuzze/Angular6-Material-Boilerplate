@@ -1,8 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- It is recommended to move changing content to separate files and
-  leave here just the base structure e.g toolbar-->
-<mat-toolbar color="primary">Material Toolbar</mat-toolbar>
-<app-my-material-component></app-my-material-component>
+  leave here just the base structure e.g toolbar.-->
+
+<!-- custom theme is connected to css classes in assets/style/app-theme.scss -->
+<div [className]="selectedTheme">
+    <mat-toolbar color="primary">Material Toolbar</mat-toolbar>
+    <app-my-material-component></app-my-material-component>
+    <button mat-button (click)="selectedTheme = ''">Default Theme</button>
+    <button mat-button (click)="selectedTheme = 'app-dark-theme'">Dark Theme</button>
+    <button mat-button (click)="selectedTheme = 'app-light-theme'">Light Theme</button>
+</div>
 
 <!--Link to app-routing.module.ts-->
 <router-outlet></router-outlet>
