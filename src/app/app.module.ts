@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './modules/material.module';
 import { MyMaterialComponentComponent } from './components/my-material-component/my-material-component.component';
-import { DataTableComponent } from './components/data-table/data-table.component';
 import { HttpClient } from '@angular/common/http/src/client';
 import { DataServiceService } from './services/data-service.service';
 import { TableComponent } from './components/table/table.component';
