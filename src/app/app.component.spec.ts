@@ -7,6 +7,8 @@ import { DataTableComponent} from './components/data-table/data-table.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { TableComponent } from './components/table/table.component';
+// note that in  larger apps it is not a good practice to have all components inside app.component.ts
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -21,7 +23,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         MyMaterialComponentComponent,
-        DataTableComponent
+        DataTableComponent,
+        TableComponent
       ],
     }).compileComponents();
   }));

@@ -10,6 +10,7 @@ import { MyMaterialComponentComponent } from './components/my-material-component
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { HttpClient } from '@angular/common/http/src/client';
 import { DataServiceService } from './services/data-service.service';
+import { TableComponent } from './components/table/table.component';
 
 
 // note that in bigger applications it is recommended to divide app
@@ -20,7 +21,7 @@ import { DataServiceService } from './services/data-service.service';
   declarations: [
     AppComponent,
     MyMaterialComponentComponent,
-    DataTableComponent
+    TableComponent
   ],
   // Modules are imported
   imports: [
@@ -32,7 +33,7 @@ import { DataServiceService } from './services/data-service.service';
     AppRoutingModule,
   ],
   // Services are provided
-  providers: [DataServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
