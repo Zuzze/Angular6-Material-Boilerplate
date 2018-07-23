@@ -18,10 +18,10 @@ export class DataServiceService {
 
     constructor(private http: HttpClient) { }
 
-    getPosts(sort?: string, order?: string, page?: number): Observable<IPost> {
+    getPosts(sort?: string, order?: string, page?: number): Observable<IPost[]> {
       const requestUrl = `${this.href}posts/`;
-      console.log(this.http.get<IPost>(requestUrl));
-      return this.http.get<IPost>(requestUrl);
+      // this.http.get<IPost>(requestUrl).subscribe(data => console.log(data));
+      return this.http.get<IPost[]>(requestUrl);
     }
 }
 

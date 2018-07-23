@@ -1,10 +1,11 @@
 import { TestBed, inject } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { DataServiceService } from './data-service.service';
 
 describe('DataServiceService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       providers: [DataServiceService]
     });
   });
