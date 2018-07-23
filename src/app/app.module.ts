@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './modules/material.module';
 import { MyMaterialComponentComponent } from './components/my-material-component/my-material-component.component';
 
-import {OverlayContainer} from '@angular/cdk/overlay';
 
 // note that in bigger applications it is recommended to divide app
 // into modules and import them instead of declaring specific components
@@ -31,8 +30,5 @@ import {OverlayContainer} from '@angular/cdk/overlay';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  // this is to change themes for the whole app
-  constructor(overlayContainer: OverlayContainer) {
-    overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
-  }
+
 }
