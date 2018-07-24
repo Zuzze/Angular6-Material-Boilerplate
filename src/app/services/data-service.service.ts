@@ -14,14 +14,19 @@ export interface IPost {
 })
 
 export class DataServiceService {
+    // define the base URL path of API here
     href = 'https://jsonplaceholder.typicode.com/';
 
     constructor(private http: HttpClient) { }
 
-    getPosts(sort?: string, order?: string, page?: number): Observable<IPost[]> {
-      const requestUrl = `${this.href}posts/`;
-      // this.http.get<IPost>(requestUrl).subscribe(data => console.log(data));
-      return this.http.get<IPost[]>(requestUrl);
+    // define specific API calls here:
+
+    getPosts(): Observable<IPost[]> {
+      return this.http.get<IPost[]>(`${this.href}posts/`);
+    }
+
+    getPost(postId: number): Observable<IPost> {
+      return this.http.get<IPost>(`${this.href}posts/${postId}`);
     }
 }
 

@@ -16,18 +16,18 @@ export class TableComponent implements OnInit, OnChanges {
   @Input() columnTooltips: string[];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  dataSource: TableDataSource;
+  dataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
 
   ngOnInit() {
     console.log(this.data);
-    this.dataSource = new TableDataSource(this.paginator, this.sort, this.data);
+    this.dataSource = new MatTableDataSource(this.data); //new TableDataSource(this.paginator, this.sort, this.data);
   }
 
   ngOnChanges(changes: SimpleChanges) {
     const data: SimpleChange = changes.data;
-    this.dataSource = new TableDataSource(this.paginator, this.sort, data.currentValue);
+    this.dataSource = new TableDataSource(this.paginator, this.sort, this.data);
     this.data = data.currentValue;
     console.log(this.data);
   }

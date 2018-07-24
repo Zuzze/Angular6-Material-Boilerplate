@@ -1,5 +1,7 @@
 // import here Material Design Components that you are using in your app
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -21,6 +23,8 @@ import {
 } from '@angular/material';
 
 const modules = [
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
   MatAutocompleteModule,
   MatButtonModule,
   MatCardModule,
@@ -37,7 +41,7 @@ const modules = [
   MatToolbarModule,
   MatSidenavModule,
   MatListModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
 ];
 
 @NgModule({

@@ -15,7 +15,6 @@
         </mat-sidenav>
         <mat-sidenav-content>
           <app-table [data]="data" [displayedColumns]="displayedColumns" [dataFieldNames]="dataFieldNames"></app-table>
-          <app-my-material-component></app-my-material-component>
           <button mat-button (click)="selectedTheme = ''">Default Theme</button>
           <button mat-button (click)="selectedTheme = 'app-dark-theme'">Dark Theme</button>
           <button mat-button (click)="selectedTheme = 'app-light-theme'">Light Theme</button>

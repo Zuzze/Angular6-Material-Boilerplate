@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
     this.data = this.dataService.getPosts().subscribe(
       (data) => {
         console.log(data);
-      this.data = data;
+        this.data = data;
     });
   }
 }
