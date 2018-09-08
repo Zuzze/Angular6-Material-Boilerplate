@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   constructor(private dataService: DataServiceService) { }
 
   ngOnInit() {
+    // API Call via service (in larger applications, add this to own componnent and keep app.component as a container)
     this.data = this.dataService.getPosts().subscribe(
       (data) => {
         console.log(data);

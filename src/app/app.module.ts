@@ -7,6 +7,7 @@ import { MaterialModule } from './modules/material.module';
 import { HttpClient } from '@angular/common/http/src/client';
 import { DataServiceService } from './services/data-service.service';
 import { TableComponent } from './components/table/table.component';
+import { CardComponent } from './components/card/card.component';
 
 
 // note that in bigger applications it is recommended to divide app
@@ -16,7 +17,8 @@ import { TableComponent } from './components/table/table.component';
   // Components are declared
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
+    CardComponent
   ],
   // Modules are imported
   imports: [

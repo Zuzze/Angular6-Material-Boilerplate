@@ -4,6 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './components/table/table.component';
+import { CardComponent } from './components/card/card.component';
 // note that in  larger apps it is not a good practice to have all components inside app.component.ts
 
 describe('AppComponent', () => {
@@ -16,7 +17,8 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        TableComponent
+        TableComponent,
+        CardComponent
       ],
     }).compileComponents();
   }));
